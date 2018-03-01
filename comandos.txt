@@ -1,0 +1,21 @@
+npm init
+npm install --save-dev babel-cli babel-preset-react
+echo '{ "presets": ["react"] }' > .babelrc
+echo '<h1>Hello, world!</h1>' > index.js
+./node_modules/.bin/babel index.js
+
+babel script.js --presets react 
+
+npm install --save-dev babel-cli
+{
+  "devDependencies": {
++   "babel-cli": "^6.0.0"
+  }
+}
+npx babel script.js
+# output...
+npx babel script.js --out-file script-compiled.js
+npx babel script.js --watch --out-file script-compiled.js
+
+ignorar archivos:
+npx babel src --out-dir lib --ignore spec.js,test.js
